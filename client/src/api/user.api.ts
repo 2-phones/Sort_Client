@@ -6,3 +6,11 @@ export const getUser = async (access_token: string) => {
     },
   });
 };
+
+export const getUserPost = async (access_token: string) => {
+  return await UserAPI.get('posts', {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  });
+};
